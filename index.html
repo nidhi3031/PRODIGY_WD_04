@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!------------------------------------------Header--------------------------------->
+    <header>
+        <nav>
+            <div class="left">Nidhi's portfolio</div><!--logo-->
+            <div class="right"></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#project">Projects</a></li>
+            </ul><!--navigation-->
+        </nav>
+    </header>
+    <!-----------------------------HEADER--------------------------------------------------->
+    <main>
+        <section id="home">
+        <section class="firstSection">
+        <div class="leftSection">
+            Hii, My name is <span class="purple">Nidhi</span>
+            <div>I am a </div>
+            <span id="element"></span>
+        </div>
+        <div class="rightSection">
+            <img src="images/nidhi logo.png.png" alt="">
+            <!--idhar humko image lagana hai png download karna hai uske baad hum background color hata sakte hai agar horizontal scroll aayega ti heighr or width change karna padega .right section mai width=80% margin: 50px 0-->
+        </div>
+        </section>
+        </section>
+        <hr>
+        <!------------------------------About & EDUCATION---------------------------------->
+        <section>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <!-- Col 1 - Image -->
+                    <div class="about-col-1">
+                        <img src="images/bg image.jpg" alt="img">
+                    </div>
+                    
+                    <!-- Col 2 - Text and Tabs -->
+                    <div class="about-col-2">
+                        <h1 class="sub-titles">About Me</h1>
+                        <p>Hello, I'm Nidhi, a dedicated and creative individual passionate about the world of web development and design. With a strong educational foundation and hands-on experience, I bring a unique blend of skills to the table.<br><br>As a web developer, I am committed to crafting digital experiences that transform ideas into interactive and user-friendly websites. My expertise extends to web design, where I specialize in creating visually captivating and user-centric digital interfaces. Additionally, I am skilled in UI/UX design, where I focus on enhancing user satisfaction by crafting intuitive and visually appealing digital experiences.</p>
+                        
+                        <!-- Tab Links -->
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        
+                        <!-- Tab Contents -->
+                        <div class="tab-contents" id="Skills">
+                            <h2>Skills</h2>
+                            <ul>
+                                <li><span>Web Development</span><br>Passionate web developer crafting digital experiences to transform ideas into interactive and user-friendly websites.</li>
+                                <li><span>Web Designer</span><br>Creative web designer shaping visually captivating and user-centric digital interfaces.</li>
+                                <li><span>UI/UX</span><br>UI/UX designer dedicated to enhancing user satisfaction by crafting intuitive and visually appealing digital experiences.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <h2>Education</h2>
+                            <ul>
+                                <li><span>2021-current</span><br>IBSAR Group of Colleges, Karjat</li>
+                                <li><span>2019-21</span><br>Anand Shala Junior College</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        </section>
+        <!----------------------------------------Project----------------------------------->
+        <section>
+        <section class="projectSection">
+            <section id="project">
+            <h1>Projects</h1>
+<div class="card">
+    <div class="card-inner">
+        <div class="card-front">
+            <img src="images/tic tac toe.jpeg" alt="TIC TAC TOE" width="20%">
+        </div>
+        <div class="card-back">
+            <div>
+                <h2>TIC TAC TOE</h2>
+                <p>A classic game of Tic Tac Toe implemented using HTML, CSS, and JavaScript. This project demonstrates my proficiency in front-end web development and interactive game design.</p>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/stopwatch.jpeg" alt="Plant Image">
+                    </div>
+                    <div class="card-back">
+                    <div>
+                        <h2>Digital clock</h2>
+                        <p>A digital clock with pause and laps lets you freeze time when needed and record important intervals, making it a handy tool for tracking and managing time during various activities."
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/weather image.jpeg" alt="Plant Image">
+                    </div>
+                    <div class="card-back">
+                        <div>
+                            <h2>Weather Web</h2>
+                            <p>A weather web application provides real-time weather updates and forecasts, keeping you informed about current conditions and helping you plan your day with accurate weather predictions."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/coffee.png" alt="Plant Image">
+                    </div>
+                    <div class="card-back">
+                        <div>
+                            <h2>Coffee shop</h2>
+                            <p>Launching a charming local coffee shop, serving artisanal coffee, fresh pastries, and a warm atmosphere. Our project is dedicated to crafting exceptional coffee experiences in a welcoming community space</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
+        <hr>
+    </main>
+    
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    
+    <script>
+    var typed = new Typed('#element', {
+    strings: ['Web Developer', 'UI/UX Designer','Web Designer'],
+    typeSpeed: 50,
+    });
+    </script>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname) {
+            for (var i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].style.display = "none";
+            }
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-link");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).style.display = "block";
+        }
+    
+        for (var i = 0; i < tablinks.length; i++) {
+            tablinks[i].addEventListener("click", function() {
+                var tabName = this.getAttribute("onclick").split("'")[1];
+                opentab(tabName);
+            });
+        }
+    </script>
+    
+
+</body>
+</html>
+
+

@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: rgb(61, 4, 16);
+    color: #fff;
+    padding: 20px;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(61, 4, 16);
+    font-size: 1.3rem;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li a{
+    list-style: none;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+nav ul li{
+    text-decoration: none;
+    justify-content: space-between;
+    
+}
+
+nav ul li a:hover{
+    color: lavender;
+    font-size: 1.04rem;
+}
+
+.left{
+    font-size: 2rem;
+    margin-left: 15px;
+
+}
+
+.firstSection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 150px 0;
+}
+
+.firstSection > div{
+width: 30%;
+}
+
+.leftSection{
+    font-size: 3rem;/* background color hata sakte hai jo hamara i am a web developer hai wo nivhe niche aara hai bcoz wo hamne div section mai likha hai humne .firstSection div ko 30% diya hai upar left section mai dono ko div laga hua hai hum > is symbol se pehle wale ko 30% denge*/
+    margin: 30px 0;
+}
+
+.rightSection{
+    margin-bottom: 40px;
+    margin-right: 40px;
+    margin-left: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: right;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    clip-path: inset(-100vm 0 0 0 round 50%);
+}
+
+.rightSection img{
+    position: absolute;
+    border:10px solid #fff;
+    border-radius: 50% ;
+    top: 99%;
+    left: 90%;
+    transform: translate(-50%,-50%) scale(1);
+    width: 100%;
+    height: 150%;
+    transition: transform 0.2s ease;
+    border: 10px solid #fff;
+}
+
+.rightSection:hover img{
+    transform: translate(-50%,-50%) scale(1.3);
+}
+
+.purple{
+    color: crimson;
+    font-family: Georgia;
+    font-size: 2.8rem;
+}
+#element{
+color: crimson;
+}
+
+.secondSection{
+    max-width: 80vw;
+    margin: auto;
+}
+
+/* Existing CSS styles for body, header, and other sections */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px; /* Add margin between rows of cards */
+}
+
+.card {
+    width: calc(25% - 20px); /* Adjust the width for the desired number of cards per row */
+    height: 300px;
+    perspective: 1000px;
+    margin: 10px;
+    background-color: white; /* Card background color */
+}
+
+/* Rest of your existing card CSS styles */
+.projectSection {
+    max-width: 150vw;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projectSection h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 280px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 20px;
+    display: inline-block;
+    background-color: white; /* Card background color */
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* Back of the card background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card-back h2{
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+    color: #905366;
+}
+
+.card-back p {
+    text-align: center;
+    margin: 0;
+    font-size: 15px;
+    color: black;
+}
+
+/* -----------------About and education-------------*/
+#about{
+    padding: 80px 0;
+    margin-bottom: 10px;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 30%;
+}
+
+.about-col-1 img{
+    width:70%;
+    border-radius: 15px solid #ababab;
+    padding-left: 20px;
+    border-radius: 10%;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+    padding-right: 30px;
+}
+
+.sub-titles{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: circle solid #fff;
+    margin: 10px 0;
+    font-size: medium;
+}
+
+.tab-contents ul li span{
+    color: #905366;
+    font-size: 18px;
+}
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
